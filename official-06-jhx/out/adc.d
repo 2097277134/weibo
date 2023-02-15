@@ -41,3 +41,4 @@
 .\out\adc.o: APP\IO.h
 .\out\adc.o: APP\adc.h
 .\out\adc.o: APP\driver.h
+.\out\adc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

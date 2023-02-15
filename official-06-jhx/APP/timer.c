@@ -41,9 +41,11 @@ void task(void)    //建议写入长期运行的主要程序
 		//超温报警，旁温>90;杆温>50
 		if(TEMP>90 || TEMP_2>50)
 		{
+			LEDR_ON;
 			bee_on;
 		}
 		else
+			LEDR_OFF;
 			bee_off;
 	}
 

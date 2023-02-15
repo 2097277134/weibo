@@ -1,6 +1,6 @@
 Dependencies for Project 'official-05-judge', Target 'official-05-judge': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\app\main.c)(0x63EC74DF)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\main.o --omf_browse .\out\main.crf --depend .\out\main.d)
+F (.\app\main.c)(0x63ECED50)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\main.o --omf_browse .\out\main.crf --depend .\out\main.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -32,16 +32,16 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (app\mylib.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (app\delay.h)(0x63E75E83)
-I (app\timer.h)(0x63E8A947)
-I (app\uart.h)(0x63E8472F)
+I (app\timer.h)(0x63ECCA3E)
+I (app\uart.h)(0x63ECDAA3)
 I (app\send.h)(0x63E61275)
 I (app\judge.h)(0x63E4B7EE)
-I (app\up.h)(0x63EA4E25)
+I (app\up.h)(0x63ECD185)
 I (app\pid.h)(0x63E5B73A)
-I (app\IO.h)(0x63E5BC9A)
-I (app\adc.h)(0x63E73283)
-I (app\driver.h)(0x63EC6147)
-F (.\APP\delay.c)(0x63E761AF)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\delay.o --omf_browse .\out\delay.crf --depend .\out\delay.d)
+I (app\IO.h)(0x63ECECED)
+I (app\adc.h)(0x63EC79C4)
+I (app\driver.h)(0x63ECE961)
+F (.\APP\delay.c)(0x63E761AF)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\delay.o --omf_browse .\out\delay.crf --depend .\out\delay.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -73,16 +73,16 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\mylib.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\adc.h)(0x63E73283)
-I (APP\driver.h)(0x63EC6147)
-F (.\APP\IO.c)(0x63E5BD60)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\io.o --omf_browse .\out\io.crf --depend .\out\io.d)
+I (APP\IO.h)(0x63ECECED)
+I (APP\adc.h)(0x63EC79C4)
+I (APP\driver.h)(0x63ECE961)
+F (.\APP\IO.c)(0x63ECEDDB)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\io.o --omf_browse .\out\io.crf --depend .\out\io.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -114,16 +114,16 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\MYLIB.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\adc.h)(0x63E73283)
-I (APP\driver.h)(0x63EC6147)
-F (.\APP\judge.c)(0x63EC6EEA)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\judge.o --omf_browse .\out\judge.crf --depend .\out\judge.d)
+I (APP\IO.h)(0x63ECECED)
+I (APP\adc.h)(0x63EC79C4)
+I (APP\driver.h)(0x63ECE961)
+F (.\APP\judge.c)(0x63EC6EEA)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\judge.o --omf_browse .\out\judge.crf --depend .\out\judge.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -155,16 +155,16 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\mylib.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\adc.h)(0x63E73283)
-I (APP\driver.h)(0x63EC6147)
-F (.\APP\pid.c)(0x63E61358)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\pid.o --omf_browse .\out\pid.crf --depend .\out\pid.d)
+I (APP\IO.h)(0x63ECECED)
+I (APP\adc.h)(0x63EC79C4)
+I (APP\driver.h)(0x63ECE961)
+F (.\APP\pid.c)(0x63E61358)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\pid.o --omf_browse .\out\pid.crf --depend .\out\pid.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -194,7 +194,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\pid.h)(0x63E5B73A)
-F (.\APP\send.c)(0x63EA54DE)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\send.o --omf_browse .\out\send.crf --depend .\out\send.d)
+F (.\APP\send.c)(0x63ECD450)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\send.o --omf_browse .\out\send.crf --depend .\out\send.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -226,16 +226,16 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\mylib.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\adc.h)(0x63E73283)
-I (APP\driver.h)(0x63EC6147)
-F (.\APP\timer.c)(0x63EC6147)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\timer.o --omf_browse .\out\timer.crf --depend .\out\timer.d)
+I (APP\IO.h)(0x63ECECED)
+I (APP\adc.h)(0x63EC79C4)
+I (APP\driver.h)(0x63ECE961)
+F (.\APP\timer.c)(0x63ECEB91)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\timer.o --omf_browse .\out\timer.crf --depend .\out\timer.d)
 I (APP\mylib.h)(0x63E9A098)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -267,17 +267,17 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\adc.h)(0x63E73283)
-I (APP\driver.h)(0x63EC6147)
+I (APP\IO.h)(0x63ECECED)
+I (APP\adc.h)(0x63EC79C4)
+I (APP\driver.h)(0x63ECE961)
 I (APP\measure.h)(0x63E72DB7)
-F (.\APP\uart1.c)(0x63EB79E6)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\uart1.o --omf_browse .\out\uart1.crf --depend .\out\uart1.d)
+F (.\APP\uart1.c)(0x63EB79E6)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\uart1.o --omf_browse .\out\uart1.crf --depend .\out\uart1.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -309,16 +309,16 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\mylib.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\adc.h)(0x63E73283)
-I (APP\driver.h)(0x63EC6147)
-F (.\APP\uart2.c)(0x63EB79E6)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\uart2.o --omf_browse .\out\uart2.crf --depend .\out\uart2.d)
+I (APP\IO.h)(0x63ECECED)
+I (APP\adc.h)(0x63EC79C4)
+I (APP\driver.h)(0x63ECE961)
+F (.\APP\uart2.c)(0x63ECD819)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\uart2.o --omf_browse .\out\uart2.crf --depend .\out\uart2.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -350,16 +350,16 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\mylib.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\adc.h)(0x63E73283)
-I (APP\driver.h)(0x63EC6147)
-F (.\APP\up.c)(0x63EC6147)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\up.o --omf_browse .\out\up.crf --depend .\out\up.d)
+I (APP\IO.h)(0x63ECECED)
+I (APP\adc.h)(0x63EC79C4)
+I (APP\driver.h)(0x63ECE961)
+F (.\APP\up.c)(0x63ECEB91)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\up.o --omf_browse .\out\up.crf --depend .\out\up.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -391,17 +391,17 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\mylib.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\adc.h)(0x63E73283)
-I (APP\driver.h)(0x63EC6147)
-F (.\APP\adc.c)(0x63E9EBD4)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\adc.o --omf_browse .\out\adc.crf --depend .\out\adc.d)
-I (APP\adc.h)(0x63E73283)
+I (APP\IO.h)(0x63ECECED)
+I (APP\adc.h)(0x63EC79C4)
+I (APP\driver.h)(0x63ECE961)
+F (.\APP\adc.c)(0x63EC9FE7)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\adc.o --omf_browse .\out\adc.crf --depend .\out\adc.d)
+I (APP\adc.h)(0x63EC79C4)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -433,15 +433,16 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\mylib.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\driver.h)(0x63EC6147)
-F (.\APP\measure.c)(0x63E7433E)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\measure.o --omf_browse .\out\measure.crf --depend .\out\measure.d)
+I (APP\IO.h)(0x63ECECED)
+I (APP\driver.h)(0x63ECE961)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x60252378)
+F (.\APP\measure.c)(0x63E7433E)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\measure.o --omf_browse .\out\measure.crf --depend .\out\measure.d)
 I (APP\measure.h)(0x63E72DB7)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -474,17 +475,17 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\mylib.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\adc.h)(0x63E73283)
-I (APP\driver.h)(0x63EC6147)
-F (.\APP\driver.c)(0x63E9A048)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\driver.o --omf_browse .\out\driver.crf --depend .\out\driver.d)
-I (APP\driver.h)(0x63EC6147)
+I (APP\IO.h)(0x63ECECED)
+I (APP\adc.h)(0x63EC79C4)
+I (APP\driver.h)(0x63ECE961)
+F (.\APP\driver.c)(0x63ECE9E5)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\driver.o --omf_browse .\out\driver.crf --depend .\out\driver.d)
+I (APP\driver.h)(0x63ECE961)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -516,15 +517,15 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 I (APP\mylib.h)(0x63E9A098)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (APP\delay.h)(0x63E75E83)
-I (APP\timer.h)(0x63E8A947)
-I (APP\uart.h)(0x63E8472F)
+I (APP\timer.h)(0x63ECCA3E)
+I (APP\uart.h)(0x63ECDAA3)
 I (APP\send.h)(0x63E61275)
 I (APP\judge.h)(0x63E4B7EE)
-I (APP\up.h)(0x63EA4E25)
+I (APP\up.h)(0x63ECD185)
 I (APP\pid.h)(0x63E5B73A)
-I (APP\IO.h)(0x63E5BC9A)
-I (APP\adc.h)(0x63E73283)
-F (.\CSL\CMSIS\DeviceSupport\system_SWM181.c)(0x605D414C)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\system_swm181.o --omf_browse .\out\system_swm181.crf --depend .\out\system_swm181.d)
+I (APP\IO.h)(0x63ECECED)
+I (APP\adc.h)(0x63EC79C4)
+F (.\CSL\CMSIS\DeviceSupport\system_SWM181.c)(0x605D414C)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\system_swm181.o --omf_browse .\out\system_swm181.crf --depend .\out\system_swm181.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -554,7 +555,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
 F (.\CSL\CMSIS\DeviceSupport\startup\arm\startup_SWM181.s)(0x6088E90E)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport--pd "__UVISION_VERSION SETA 535"--list .\out\startup_swm181.lst --xref -o .\out\startup_swm181.o --depend .\out\startup_swm181.d)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_adc.c)(0x5ABC5B5C)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_adc.o --omf_browse .\out\swm181_adc.crf --depend .\out\swm181_adc.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_adc.c)(0x5ABC5B5C)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_adc.o --omf_browse .\out\swm181_adc.crf --depend .\out\swm181_adc.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -583,7 +584,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.c)(0x5ABC5B5C)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_cache.o --omf_browse .\out\swm181_cache.crf --depend .\out\swm181_cache.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.c)(0x5ABC5B5C)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_cache.o --omf_browse .\out\swm181_cache.crf --depend .\out\swm181_cache.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -612,7 +613,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_can.c)(0x60A1E78C)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_can.o --omf_browse .\out\swm181_can.crf --depend .\out\swm181_can.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_can.c)(0x60A1E78C)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_can.o --omf_browse .\out\swm181_can.crf --depend .\out\swm181_can.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -641,7 +642,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_cmp.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_cmp.o --omf_browse .\out\swm181_cmp.crf --depend .\out\swm181_cmp.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_cmp.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_cmp.o --omf_browse .\out\swm181_cmp.crf --depend .\out\swm181_cmp.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -670,7 +671,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_cordic.o --omf_browse .\out\swm181_cordic.crf --depend .\out\swm181_cordic.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_cordic.o --omf_browse .\out\swm181_cordic.crf --depend .\out\swm181_cordic.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -699,7 +700,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_div.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_div.o --omf_browse .\out\swm181_div.crf --depend .\out\swm181_div.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_div.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_div.o --omf_browse .\out\swm181_div.crf --depend .\out\swm181_div.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -728,7 +729,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_dma.c)(0x60A1E798)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_dma.o --omf_browse .\out\swm181_dma.crf --depend .\out\swm181_dma.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_dma.c)(0x60A1E798)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_dma.o --omf_browse .\out\swm181_dma.crf --depend .\out\swm181_dma.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -757,7 +758,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_exti.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_exti.o --omf_browse .\out\swm181_exti.crf --depend .\out\swm181_exti.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_exti.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_exti.o --omf_browse .\out\swm181_exti.crf --depend .\out\swm181_exti.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -786,7 +787,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_flash.c)(0x60B44977)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_flash.o --omf_browse .\out\swm181_flash.crf --depend .\out\swm181_flash.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_flash.c)(0x60B44977)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_flash.o --omf_browse .\out\swm181_flash.crf --depend .\out\swm181_flash.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -815,7 +816,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_gpio.c)(0x5B0E5CDC)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_gpio.o --omf_browse .\out\swm181_gpio.crf --depend .\out\swm181_gpio.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_gpio.c)(0x5B0E5CDC)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_gpio.o --omf_browse .\out\swm181_gpio.crf --depend .\out\swm181_gpio.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -844,7 +845,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_i2c.c)(0x5E5DDB77)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_i2c.o --omf_browse .\out\swm181_i2c.crf --depend .\out\swm181_i2c.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_i2c.c)(0x5E5DDB77)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_i2c.o --omf_browse .\out\swm181_i2c.crf --depend .\out\swm181_i2c.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -873,7 +874,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_irqmux.o --omf_browse .\out\swm181_irqmux.crf --depend .\out\swm181_irqmux.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_irqmux.o --omf_browse .\out\swm181_irqmux.crf --depend .\out\swm181_irqmux.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -902,7 +903,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_port.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_port.o --omf_browse .\out\swm181_port.crf --depend .\out\swm181_port.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_port.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_port.o --omf_browse .\out\swm181_port.crf --depend .\out\swm181_port.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -931,7 +932,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_pwm.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_pwm.o --omf_browse .\out\swm181_pwm.crf --depend .\out\swm181_pwm.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_pwm.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_pwm.o --omf_browse .\out\swm181_pwm.crf --depend .\out\swm181_pwm.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -960,7 +961,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_sdadc.c)(0x5BD67C5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_sdadc.o --omf_browse .\out\swm181_sdadc.crf --depend .\out\swm181_sdadc.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_sdadc.c)(0x5BD67C5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_sdadc.o --omf_browse .\out\swm181_sdadc.crf --depend .\out\swm181_sdadc.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -989,7 +990,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_slcd.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_slcd.o --omf_browse .\out\swm181_slcd.crf --depend .\out\swm181_slcd.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_slcd.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_slcd.o --omf_browse .\out\swm181_slcd.crf --depend .\out\swm181_slcd.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -1018,7 +1019,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.c)(0x5BA9CF1B)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_sleep.o --omf_browse .\out\swm181_sleep.crf --depend .\out\swm181_sleep.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.c)(0x5BA9CF1B)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_sleep.o --omf_browse .\out\swm181_sleep.crf --depend .\out\swm181_sleep.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -1047,7 +1048,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_spi.c)(0x5B88FD99)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_spi.o --omf_browse .\out\swm181_spi.crf --depend .\out\swm181_spi.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_spi.c)(0x5B88FD99)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_spi.o --omf_browse .\out\swm181_spi.crf --depend .\out\swm181_spi.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -1076,7 +1077,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_timr.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_timr.o --omf_browse .\out\swm181_timr.crf --depend .\out\swm181_timr.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_timr.c)(0x5ABC5B5D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_timr.o --omf_browse .\out\swm181_timr.crf --depend .\out\swm181_timr.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -1105,7 +1106,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_uart.c)(0x5D4172AE)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_uart.o --omf_browse .\out\swm181_uart.crf --depend .\out\swm181_uart.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_uart.c)(0x5D4172AE)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_uart.o --omf_browse .\out\swm181_uart.crf --depend .\out\swm181_uart.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
@@ -1134,7 +1135,7 @@ I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cordic.h)(0x5ABC5B5D)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_irqmux.h)(0x5AD43BD3)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h)(0x5ABC5B5C)
 I (.\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h)(0x5BA9CF17)
-F (.\CSL\SWM181_StdPeriph_Driver\SWM181_wdt.c)(0x5B9B2E6F)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_wdt.o --omf_browse .\out\swm181_wdt.crf --depend .\out\swm181_wdt.d)
+F (.\CSL\SWM181_StdPeriph_Driver\SWM181_wdt.c)(0x5B9B2E6F)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\swm181_wdt.o --omf_browse .\out\swm181_wdt.crf --depend .\out\swm181_wdt.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
