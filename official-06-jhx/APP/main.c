@@ -52,14 +52,14 @@ int main(void)
 				send_0();  //发送固定功率0W字符串
 		}
 
-	for(int i=0;i>=200;i++){
-	HZ_OFF;
-		F_OFF;
-	delay_ms(100);
-	HZ_ON;
-		F_ON;
-	delay_ms(100);
-	}
+//	for(int i=0;i>=200;i++){
+//	HZ_OFF;
+//		F_OFF;
+//	delay_ms(100);
+//	HZ_ON;
+//		F_ON;
+//	delay_ms(100);
+//	}
 	}
 }
 
