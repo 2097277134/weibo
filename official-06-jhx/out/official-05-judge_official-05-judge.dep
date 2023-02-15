@@ -1,6 +1,6 @@
 Dependencies for Project 'official-05-judge', Target 'official-05-judge': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\app\main.c)(0x63EC6EE8)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\main.o --omf_browse .\out\main.crf --depend .\out\main.d)
+F (.\app\main.c)(0x63EC74DF)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork -I .\APP -I .\CSL -I .\CSL\CMSIS\CoreSupport -I .\CSL\CMSIS\DeviceSupport -I .\CSL\SWM181_StdPeriph_Driver-IC:\Users\20972\AppData\Local\Arm\Packs\Synwit\SWM32_DFP\1.8.5\CSL\SWM181\CMSIS\DeviceSupport-D__UVISION_VERSION="535"-o .\out\main.o --omf_browse .\out\main.crf --depend .\out\main.d)
 I (.\CSL\CMSIS\DeviceSupport\SWM181.h)(0x63E5B1CD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (.\CSL\CMSIS\CoreSupport\core_cm0.h)(0x542135DE)
