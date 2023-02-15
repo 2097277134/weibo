@@ -6,7 +6,6 @@
 extern int power;
 extern int time;
 extern int T1;
-extern double ratio;
 extern int SETTEMP;    //设定时间
 extern int T;  //运行整数周期数
 extern int upinitflag;

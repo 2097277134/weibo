@@ -10,6 +10,5 @@ extern int flag_0w;       //允许发送0w标志位
 extern int flag_up_s;
 void task(void);
 extern int taskflag[2];
-extern int ADCflag[2];
 extern int sendflag[2];
 #endif //__TIMER_H__

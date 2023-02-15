@@ -12,79 +12,39 @@ extern int remain_time;
 double TEMP_2=0;
 int flag_up_s=0;
 int taskflag[2]={0,100};      //task标志位
-int ADCflag[2]={0,100};			//ADC标志位
-int sendflag[2]={0,200};		//电容屏发送标志位
 int upflag=0;		//t1时间段中断标志位1000ms
-int t2flag=0;		//t2时间段中断标志位1000ms
-//IRQ5_Handler
+uint8_t SEND_Microwave_OFF[8]={0x5A,0xA5,0x05,0x82,0x10,0x06,0x00,0x00}; //向电容屏发送微波关闭
+//IRQ4_Handler
 void IRQ4_Handler(void){   //每1ms开启一次中断
   TIMR_INTClr(TIMR1);      //清除TIMR1中断标志位
-
 	taskflag[0]++;           
-	ADCflag[0]++;            
-	sendflag[0]++;           
-	upinitflag++;            //up初始化中断标志位
+	upinitflag++;            //upinit初始化中断标志位
 	upflag++;                //up中断标志位
-	t2flag++;                //
+
 }
-void task(void)
+void task(void)    //建议写入长期运行的主要程序
 {
-	
-		
-		
-		if(ADCflag[0]>=ADCflag[1]){
-		ADCflag[0]=0;
-		TEMP=adc_read();
-//		TEMP_2=meas_6();	
+		 
+		if(CapacitiveScreen.WaterPumpSwitch==0x01){
+			DirverEnable
+		DRIVER_Start();
 		}
-	
-//		//测温循环
-//		for(int i=1;i<=256;i++)
-//		{
-//			TEMP=meas_5();					 //旁温实时测温
-//		}
-//		
-//		for(int i=1;i<=256;i++)
-//		{
-//			TEMP_2=meas_6();        //杆温实时测温
-//		}
-//		
-//		MCU_t_screen();  //向串口三发送
+		else{
+		DRIVER_Stop();
+		CapacitiveScreen.MicrowaveSwitch=0x00;
+		USART_SendData(UART2,SEND_Microwave_OFF,8);
 		
-		//初始时每一秒向电源发送0W指令一次
-		if(flag_0w&&flag_200ms>=5)  
-		{
-			send_0();  //固定功率150W左右
-			flag_200ms=0;
+		
 		}
-		
-		//每隔一秒设定时间减一
-		if(flag_up_s&&flag_200ms>=5)
-		{
-			remain_time-=1;
-			flag_200ms=0;
-			if(remain_time==0) 
-			{
-				flag_up_s=0;
-//				sys_reset();
-			}
-		}
-		
-		if(TEMP==SETTEMP-4)
-		{
-			ratio=1;  //占空比
-			T1=1;  //PID调节周期时长时长数(秒)
-		}
-		
+		TEMP=Get_Adc_Average(2);
+		MCU_t_screen();               //传输一次温度数据		
 		//超温报警，旁温>90;杆温>50
-//		if(TEMP>90 || TEMP_2>50)
-//		{
-//			BEEP=1;
-//		}
-//		else
-//			BEEP=0;
-		
-		flag_200ms++;	
+		if(TEMP>90 || TEMP_2>50)
+		{
+			bee_on;
+		}
+		else
+			bee_off;
 	}
 
 

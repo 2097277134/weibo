@@ -4,15 +4,15 @@
 #include "SWM181.h"
 #include "mylib.h"
 
-//LED_B
-#define LEDB_ON GPIO_SetBit(GPIOC, PIN3);	
-#define LEDB_OFF GPIO_ClrBit(GPIOC, PIN3);	
-//LED_G
-#define LEDG_ON GPIO_SetBit(GPIOC, PIN5);	
-#define LEDG_OFF GPIO_ClrBit(GPIOC, PIN5);	
 //LED_R
-#define LEDR_ON GPIO_SetBit(GPIOB, PIN9);	
-#define LEDR_OFF GPIO_ClrBit(GPIOB, PIN9);	
+#define LEDR_OFF GPIO_SetBit(GPIOC, PIN3);	
+#define LEDR_ON GPIO_ClrBit(GPIOC, PIN3);	
+//LED_G
+#define LEDG_OFF GPIO_SetBit(GPIOC, PIN5);	
+#define LEDG_ON GPIO_ClrBit(GPIOC, PIN5);	
+//LED_B
+#define LEDB_OFF GPIO_SetBit(GPIOB, PIN9);	
+#define LEDB_ON GPIO_ClrBit(GPIOB, PIN9);	
 //bee
 #define bee_on GPIO_SetBit(GPIOA, PIN15);	
 #define bee_off GPIO_ClrBit(GPIOA, PIN15);	

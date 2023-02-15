@@ -6,14 +6,15 @@
 void DRIVER_Init(void);
 
 //EN 
-#define EN_ON GPIO_SetBit(GPIOA, PIN7);	   //PA7步进电机使能
-#define EN_OFF GPIO_ClrBit(GPIOA, PIN7);	 //PA7清零
+#define DirverDisable  GPIO_ClrBit(GPIOA, PIN5);	   //PA5步进电机失能
+#define DirverEnable GPIO_SetBit(GPIOA, PIN5);	 //PA5步进电机失能
 //+-
-#define F_OFF GPIO_SetBit(GPIOA, PIN6);	   //电机相关
-#define F_ON GPIO_ClrBit(GPIOA, PIN6);	   //
+#define DirverPositiveDirection GPIO_SetBit(GPIOA, PIN4);	   //电机方向+
+#define DirverNegativeDirection GPIO_ClrBit(GPIOA, PIN4);	   //-
 //HZ
-#define HZ_OFF GPIO_SetBit(GPIOA, PIN5);	
-#define HZ_ON GPIO_ClrBit(GPIOA, PIN5);	
+#define HZ_OFF GPIO_SetBit(GPIOA, PIN1);		//脉冲
+#define HZ_ON GPIO_ClrBit(GPIOA, PIN1);	
 
-
+void DRIVER_Start(void);
+void DRIVER_Stop(void);
 #endif
