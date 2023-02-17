@@ -8,8 +8,8 @@
 #define LEDR_OFF GPIO_SetBit(GPIOC, PIN3);	
 #define LEDR_ON GPIO_ClrBit(GPIOC, PIN3);	
 //LED_G
-#define LEDG_OFF GPIO_SetBit(GPIOC, PIN5);	
-#define LEDG_ON GPIO_ClrBit(GPIOC, PIN5);	
+#define LEDG_OFF GPIO_SetBit(GPIOC, PIN5);	 //电平拉高关闭
+#define LEDG_ON GPIO_ClrBit(GPIOC, PIN5);	   //电平拉低开启
 //LED_B
 #define LEDB_OFF GPIO_SetBit(GPIOB, PIN9);	
 #define LEDB_ON GPIO_ClrBit(GPIOB, PIN9);	

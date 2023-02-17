@@ -5,7 +5,7 @@ struct PID pid;
 
 //extern double TEMP;						//储存到小数一位的实际实时温度
 
-int stage1=1;
+int stage1=1;   //保证PID程序只进入一次
 int stage2=1;
 int stage3=1;
 
@@ -85,16 +85,16 @@ int PID_realize(void)
 		flag_T=0;
 	}
 
-	if(CapacitiveScreen.time-120>=0.5*SETTIME&&stage3)    //前半段时间到一阶段温度值
+	if(CapacitiveScreen.time-120>=0.5*SETTIME&&stage3)    //前半段时间到一阶段温度值，主要保证升温
 	{PID_Init();
 		stage3=0;
-		pid.Kp=70;						
-		pid.Ki=0.001;						
-		pid.Kd=2;			
+		pid.Kp=70;						//第二个整定，减缓超调，可大幅度调整
+		pid.Ki=0.001;					//第一个整定，减少稳态误差，提高响应速度，小幅度调整
+		pid.Kd=2;			        //最后一个整定，使曲线平滑，小幅度调整
 		pid.Set = TEMP1;				//一阶段温度目标值
 	}
 	
-	if(0.5*SETTIME>CapacitiveScreen.time-120 && CapacitiveScreen.time-120>=0.2*SETTIME&&stage1)   //0.5~0.8倍总时间到达二阶段目标值
+	if(0.5*SETTIME>CapacitiveScreen.time-120 && CapacitiveScreen.time-120>=0.2*SETTIME&&stage1)   //0.5~0.8倍总时间到达二阶段目标值，主要保证升温
 	{
 		PID_Init();
 		pid.Kp=70;						
@@ -104,7 +104,7 @@ int PID_realize(void)
 		pid.Set = TEMP2;				//二阶段温度目标值
 	}
 	
-	if(0.2*SETTIME>CapacitiveScreen.time-120&&stage2)    //最后 0.8~最终时间 上升到最后温度
+	if(0.2*SETTIME>CapacitiveScreen.time-120&&stage2)    //最后 0.8~最终时间 上升到最后温度，主要保证稳定
 	{
 		PID_Init();
 		pid.Kp=80;						
@@ -113,7 +113,6 @@ int PID_realize(void)
 		stage2=0;
 		pid.Set = CapacitiveScreen.temperature;				//最后温度值
 	}
-	
 	
 	pid.Actual   = TEMP/10;					//实际值 
 	pid.err      = pid.Set - pid.Actual;	//之差
@@ -127,8 +126,6 @@ int PID_realize(void)
 		t=pid.voltage;
 	if(t>220)		t=220;       //输出限幅
 	else if(t<100)	t=100;
-	
-
 
 	return t;
 }

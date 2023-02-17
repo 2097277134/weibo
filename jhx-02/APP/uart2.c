@@ -1,13 +1,9 @@
 #include "SWM181.h"
 #include "mylib.h"
 
-
-
-
 CapacitiveScreenData CapacitiveScreen;
 
-
-uint8_t Rxd_End = 0;
+uint8_t Rxd_End = 0;   //空闲中断标志位
 
 char UART_RXBuffer[UART_RX_LEN] = {0};
 
@@ -39,7 +35,6 @@ void uart2_init(void)
 uint32_t UART2_GetChars(char *data)
 {
 	uint32_t len = 0;
-	
 	if(UART2_RX_STA != 0)
 	{
 		NVIC_DisableIRQ(IRQ2_IRQ);		//从UART_RXBuffer读取数据过程中要关闭中断，防止读写混乱
@@ -150,18 +145,17 @@ void Data_Deal(void)
 			if (UART_RXBuffer[5]==0x07){		//水泵开关		UART_RXBuffer[8]==0x00关 UART_RXBuffer【8]==0x01开
 			CapacitiveScreen.WaterPumpSwitch=UART_RXBuffer[8];
 			}
-		
-	
+
 			//回发给设备
 			//Data_Send();
 		}
 		//如果是自己的数据粘包了
-		else if(UART_RXIndex == 15&&UART_RXBuffer[2]==0x03)
+		else if(UART_RXIndex == 15&&UART_RXBuffer[2]==0x03)  //UART_RXBuffer[2]==0x03代表接受的是返回的OK字符
 		{
 			//把数据转移一下
-			for(i = 0; i < 9; i++)
+			for(i = 0; i < 9; i++)     //正常数据是9字节
 			{
-				UART_RXBuffer[i] = UART_RXBuffer[i + 6];
+				UART_RXBuffer[i] = UART_RXBuffer[i + 6];   //电容屏返回的OK是6字节
 			}
 	
 			//放入你的处理代码
@@ -188,6 +182,5 @@ void Data_Deal(void)
 		//清零变量，准备下一次接收
 		UART_RXIndex = 0;
 		Rxd_End = 0;
-		
 	}
 }
