@@ -11,7 +11,7 @@
 ******************************************************************************************************************************************/
 int fputc(int ch, FILE *f)
 {
-	UART_WriteByte(UART2, ch);
+	UART_WriteByte(UART1, ch);
 	
 	while(UART_IsTXBusy(UART2));
  	
@@ -26,7 +26,7 @@ void uart1_init(void)
 	PORT_Init(PORTB, PIN6, FUNMUX_UART1_RXD, 1);	//GPIOB.6配置为UART1输入引脚
 	PORT_Init(PORTB, PIN7, FUNMUX_UART1_TXD, 0);	//GPIOB.7配置为UART1输出引脚
  	
- 	UART_initStruct.Baudrate = 115200;
+ 	UART_initStruct.Baudrate = 9600;
 	UART_initStruct.DataBits = UART_DATA_8BIT;
 	UART_initStruct.Parity = UART_PARITY_NONE;
 	UART_initStruct.StopBits = UART_STOP_1BIT;

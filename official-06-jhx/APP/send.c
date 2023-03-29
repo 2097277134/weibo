@@ -6,7 +6,10 @@ u8 SENDE_BUF[2]={0x55,0XAA};  //数据尾数组
 
 u8 SEND_TTSH_BUF[4]={0x5A,0xA5,0x05,0x82};  //向屏幕发送写温度的数据头（温度到屏幕数据头）
 u8 SEND_Sidet_address[2]= {0x10,0x08};
+
 u8 SEND_Rod_address[2]= {0x10,0x09};
+u8 SEND_min_address[3]= {0x10,0x04,0x00};     //min时间地址
+u8 SEND_s_address[3]= {0x10,0x05,0x00};     //s时间地址
 u8 SEND_microwave_address[2]= {0x10,0x06};
 u8 SEND_TSE_BUF[2]={0x0D,0x0A};  //向屏幕发送的数据尾
 
@@ -77,27 +80,49 @@ void MCU_t_screen(void)
 {
 //	u8 SEND_BUF[8];
 	extern double TEMP;						//储存实际实时温度
-	
+	extern double TEMP_2;
 	u8 hjght_t[1],low_t[1];
-	TEMP=Get_Adc_Average(2);
-	int TEMP_10=TEMP*10;
+	u8 hjght_t1[1],low_t1[1];
+	u8 timemin[1],times[1];
+	TEMP=Get_Adc_Average(40);
+	TEMP_2=Temp_2;
+	int TEMP_10=TEMP;
+	int TEMP_10_2=TEMP_2;
+//	printf("%d",TEMP_10);
+	hjght_t[0] = TEMP_10>>8;
+	low_t[0]=TEMP_10&0xff;
 	
-	hjght_t[0] = 0x00;
-	low_t[0]=TEMP_10;
+	
+	hjght_t1[0] = TEMP_10_2>>8;
+	low_t1[0]=TEMP_10_2&0xff;
 //	SEND_BUF=*SEND_TTSH_BUF;
 	//发送前缀一个0x2B
 //	Data_Send(8,SEND_BUF);
 	USART_SendData(UART2,SEND_TTSH_BUF,4);
 	USART_SendData(UART2,SEND_Sidet_address,2);
-	
-//	USART_SendData(UART2,SEND_TTSH_BUF);
-//	USART_SendData(UART2,SEND_Rod_address);
 	USART_SendData(UART2,hjght_t,1);
 	USART_SendData(UART2,low_t,1);
+	
+
+
+	u16 time1=CapacitiveScreen.time;
+	timemin[0]=time1/60;
+	times[0]=time1%60;
+	
+	
+	USART_SendData(UART2,SEND_TTSH_BUF,4);
+	USART_SendData(UART2,SEND_min_address,3);
+	USART_SendData(UART2,timemin,1);
+	
+	USART_SendData(UART2,SEND_TTSH_BUF,4);
+	USART_SendData(UART2,SEND_s_address,3);
+	USART_SendData(UART2,times,1);
 //	USART_SendData(UART2,SEND_TTSH_BUF);
 //	USART_SendData(UART2,SEND_Sidet_address);
-//	USART_SendData(UART2,hjght_t);
-//	USART_SendData(UART2,low_t);
+	USART_SendData(UART2,SEND_TTSH_BUF,4);
+	USART_SendData(UART2,SEND_Rod_address,2);
+	USART_SendData(UART2,hjght_t1,1);
+	USART_SendData(UART2,low_t1,1);
 }
 
 
@@ -105,15 +130,15 @@ void MCU_t_screen(void)
 void uart_1()  //MCU向串口一发送温度数据
 {
 	//发送前缀三个0x5A,0XA5,0X07
-		USART_SendData(UART1,SENDH_BUF,8);
+		USART_SendData(UART1,SENDH_BUF,3);
 	//发送功能位01设置 or 02查询
-		USART_SendData(UART1,SEND_set,8);
+		USART_SendData(UART1,SEND_set,1);
 	//发送发送数据高八位
-		USART_SendData(UART1,hjght_p,8);
+		USART_SendData(UART1,hjght_p,1);
 	//发送发送数据低八位
-     USART_SendData(UART1,low_p,8);      //向串口1发送功率数据
+     USART_SendData(UART1,low_p,1);      //向串口1发送功率数据
 	//发送数据尾
-		USART_SendData(UART1, SENDE_BUF,8);         //向串口1发送数据
+		USART_SendData(UART1, SENDE_BUF,2);         //向串口1发送数据
 }
 
 

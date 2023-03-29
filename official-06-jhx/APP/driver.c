@@ -22,15 +22,14 @@ void DRIVER_Init(){
 	
 	PORT_Init(PORTA, PIN1, FUNMUX_PWM1B_OUT, 0);
 	
-//	PWM_Start(PWM1, 0, 1);
-	
 	GPIO_Init(GPIOA,PIN4,1, 0, 0, 0);    //正反转
 	GPIO_Init(GPIOA,PIN5,1, 0, 0, 0);		 //使能脚
-	
+	PWM_Start(PWM1, 0, 1);
 	
 	
 	DirverPositiveDirection;
 	DirverDisable;
+
 }
 
 void DRIVER_Start(void){

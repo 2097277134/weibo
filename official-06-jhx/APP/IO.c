@@ -12,8 +12,8 @@ void IO_Init(void)
 	GPIO_Init(GPIOB, PIN9, 1, 0, 0, 0);          //LED_R
 	GPIO_Init(GPIOC, PIN5, 1, 0, 0, 0);          //LED_G
 	LEDB_OFF;
-	LEDR_OFF;
-	LEDG_ON;
+	LEDR_ON;
+	LEDG_OFF;
 
 	LED1_ON;
 	LED2_ON;

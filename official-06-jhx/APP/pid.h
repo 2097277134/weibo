@@ -3,10 +3,12 @@
 #include "SWM181.h"
 
 extern double TEMP;						//储存到小数一位的实际实时温度
-extern int SETTEMP;				//储存到小数一位的实际设置温度
-extern int SETTIME;       //设置时间
-extern int remain_time;   //剩余时间
 
+extern int SETTIME;       //设置时间
+
+extern int stage1;
+extern int stage2;
+extern int stage3;
 extern struct PID pid;
 
 struct PID{

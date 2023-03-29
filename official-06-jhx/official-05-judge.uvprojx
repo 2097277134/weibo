@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>SWM181xB</Device>
           <Vendor>Synwit</Vendor>
-          <PackID>Synwit.SWM32_DFP.1.8.5</PackID>
+          <PackID>Synwit.SWM32_DFP.1.20.4</PackID>
           <PackURL>http://www.synwit.com/pack</PackURL>
           <Cpu>IRAM(0x20000000,0x4000) IROM(0x00000000,0x1E000) CPUTYPE("Cortex-M0") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4099</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>

@@ -3,8 +3,10 @@
 
 #include "math.h" 
 
-extern double Temp;
+
 double Temp=0;
+double Temp_2=0;
+
 int16_t SDADC_Result[8] = {0};
 void adc_Init(void)
 {
@@ -30,10 +32,10 @@ void adc_Init(void)
 	SDADC_Config_Cali(SDADC, SDADC_CFG_A, SDADC_CALI_COM_GND, 1);
 	SDADC_Config_Sel(SDADC, SDADC_CFG_A, SDADC_CH1 | SDADC_CH3 | SDADC_CH4);
 	
-	IRQ_Connect(IRQ0_15_SDADC, IRQ3_IRQ, 0);
+	IRQ_Connect(IRQ0_15_SDADC, IRQ3_IRQ, 3);
 	
 	SDADC_Open(SDADC);		
-	TIMR_Init(TIMR3, TIMR_MODE_TIMER, SystemCoreClock/500, 0);
+	TIMR_Init(TIMR3, TIMR_MODE_TIMER, SystemCoreClock/500, 3);
 	TIMR_Start(TIMR3);	
 
 }
@@ -60,7 +62,7 @@ void adc_Init(void)
 
 void IRQ3_Handler(void)
 {
-	double temp,t;
+	double temp,t,t1;
 	int16_t res;
 	uint32_t chn,val;
 	
@@ -72,27 +74,57 @@ void IRQ3_Handler(void)
 		SDADC_Result[chn] = val;
 	}
 		res=SDADC_Result[4];
+		t1=SDADC_Result[3];
 		temp=(float)(res)*(3.3/65536);          //获取计算后的带小数的实际电压值，比如3.1111
-//		t = temp*20;
-//		t = t / 0.000586;                    //换算成电阻  电压除以电流
-//		Temp=(2.558*t)-256.02f;  
+ 
 		t = temp/20;
-		t = t / 0.000584;                    //换算成电阻  电压除以电流
-//		Temp=(2.558*t)-256.02f;                //电阻温度变换
-		Temp=1/(log(t/10000)/3950+1/(273.15+25.0));
-	Temp=Temp-273.15;
+		t = t / 0.0004;                    //换算成电阻  电压除以电流
+	Temp=10.0*(t-100)/0.462;
+	t1=(float)(t1)*(3.3/65536);
+	t1=t1/20;
+	t1=t1/0.0004;
+	Temp_2=10.0*(t1-77.5)/0.462;
+//	
 }
 
-int16_t Get_Adc_Average(int times){
+int16_t Get_Adc_Average(uint16_t len){
 
 uint32_t temp_val=0;
 	u8 t;
-	for(t=0;t<times;t++)
-	{
-		temp_val+=Temp;
-//		delay_ms(5);
-	}
-	return temp_val/times;
+	int32_t Sum;  
+	int16_t Assist_buf[256];  //帮助缓存
+	int16_t Assist = 0,i,j;
+	 for(i = 0; i < len; i++)
+    {
+        Assist_buf[i] = Temp;  //将Buf[i]中的数据转移到Assist_buf[i]中
+    }
+		 for(i = 0; i < len; i++)
+    {
+        for(j = i; j < len; j++)
+        {
+            if(Assist_buf[i] < Assist_buf[j])
+            {
+                Assist = Assist_buf[i];  //Assist放较小数值
+                Assist_buf[i] = Assist_buf[j];  //Assist_buf[i]放较大数值
+                Assist_buf[j] = Assist;  //Assist_buf[j]放较小数值
+            }
+        }
+    }
+		Sum = 0;
+		
+		//计算Assist_buf[i]中间段数值和
+    for(i = len *5/ 8; i < len *7/8 ; i++)
+    {
+        Sum = Sum + Assist_buf[i];
+    }
+
+    return Sum / (len / 4);  //返回平均值
+//	for(int t=0;t<len;t++)
+//	{
+//		temp_val+=Temp;
+////		delay_ms(5);
+//	}
+//	return temp_val/len;
 
 }
 

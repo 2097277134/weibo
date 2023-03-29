@@ -7,7 +7,7 @@ double View_temp,View_adc,View_adc4,View_temp4,View_T;
 int Point_Adc = 0;
 int Range_Set = 128;
 double TEMP=0;
-
+double TEMP_2=0;
 //参数一：温度采集值；参数二：数据长度，返回收集数据平均值
 int16_t MidSumClucum(int16_t Buf[], uint16_t len)  
 {

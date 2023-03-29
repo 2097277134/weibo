@@ -6,6 +6,7 @@ void IRQ5_Handler(void)
 {
 	TIMR_INTClr(TIMR0);  //清除中断标志位
 	Flag_Systick = 1;
+	MCU_t_screen();               //传输一次温度数据	
 }
 
 void delay_ms(uint16_t ms)

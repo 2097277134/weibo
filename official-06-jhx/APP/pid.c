@@ -1,16 +1,17 @@
 #include "SWM181.h"
 #include "pid.h"
-
+#include "mylib.h"
 struct PID pid;
 
 //extern double TEMP;						//储存到小数一位的实际实时温度
-extern int SETTEMP;				//储存到小数一位的实际设置温度
-extern int SETTIME;       //设置时间
-extern int remain_time;   //剩余时间
+
+int stage1=1;
+int stage2=1;
+int stage3=1;
 
 void PID_Init(void)					//PID初始化
 {
-	pid.Set=SETTEMP;  //设置温度
+	pid.Set=CapacitiveScreen.temperature;  //设置温度
 	pid.Actual=TEMP;  //实际温度
 	pid.err=0;        //误差
 	pid.err_last=0;   //上一次误差                                                                                                                                                                                            
@@ -78,38 +79,43 @@ int PID_realize(void)
 	static double TEMP1=0;
 	static double TEMP2=0;
 	if(flag_T)
-	{
-		TEMP1=TEMP+(SETTEMP-TEMP)*0.6;   //一阶段温度目标值
-		TEMP2=TEMP+(SETTEMP-TEMP)*0.8;   //二阶段温度目标值
+	{	
+		TEMP1=TEMP/10+(CapacitiveScreen.temperature-TEMP/10)*0.6;   //一阶段温度目标值
+		TEMP2=TEMP/10+(CapacitiveScreen.temperature-TEMP/10)*0.8;   //二阶段温度目标值
 		flag_T=0;
 	}
 
-	if(remain_time>=0.5*SETTIME)    //前半段时间到一阶段温度值
-	{
-		pid.Kp=25;						
-		pid.Ki=0.8;						
-		pid.Kd=1;			
+	if(CapacitiveScreen.time-120>=0.5*SETTIME&&stage3)    //前半段时间到一阶段温度值
+	{PID_Init();
+		stage3=0;
+		pid.Kp=70;						
+		pid.Ki=0.001;						
+		pid.Kd=2;			
 		pid.Set = TEMP1;				//一阶段温度目标值
 	}
 	
-	if(0.5*SETTIME>remain_time && remain_time>=0.2*SETTIME)   //0.5~0.8倍总时间到达二阶段目标值
+	if(0.5*SETTIME>CapacitiveScreen.time-120 && CapacitiveScreen.time-120>=0.2*SETTIME&&stage1)   //0.5~0.8倍总时间到达二阶段目标值
 	{
-		pid.Kp=17;						
-		pid.Ki=0.5;						
-		pid.Kd=0.5;			
+		PID_Init();
+		pid.Kp=70;						
+		pid.Ki=0.002;						
+		pid.Kd=2;			
+		stage1=0;
 		pid.Set = TEMP2;				//二阶段温度目标值
 	}
 	
-	if(0.2*SETTIME>remain_time)    //最后 0.8~最终时间 上升到最后温度
+	if(0.2*SETTIME>CapacitiveScreen.time-120&&stage2)    //最后 0.8~最终时间 上升到最后温度
 	{
-		pid.Kp=23;						
-		pid.Ki=1;						
-		pid.Kd=0.1;	
-		pid.Set = SETTEMP;				//最后温度值
+		PID_Init();
+		pid.Kp=80;						
+		pid.Ki=0.001;						
+		pid.Kd=2;	
+		stage2=0;
+		pid.Set = CapacitiveScreen.temperature;				//最后温度值
 	}
 	
 	
-	pid.Actual   = TEMP;					//实际值 
+	pid.Actual   = TEMP/10;					//实际值 
 	pid.err      = pid.Set - pid.Actual;	//之差
 	
 	pid.voltage += pid.Kp*(pid.err-	pid.err_02)							//设定值与实际的偏差
@@ -118,11 +124,11 @@ int PID_realize(void)
 
 	pid.err_03 = pid.err_02;
 	pid.err_02 = pid.err;
+		t=pid.voltage;
+	if(t>220)		t=220;       //输出限幅
+	else if(t<100)	t=100;
 	
-	if(pid.voltage>290)		pid.voltage=290;       //输出限幅
-	else if(pid.voltage<130)	pid.voltage=130;
-	
-	t=pid.voltage;
+
 
 	return t;
 }

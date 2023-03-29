@@ -28,3 +28,15 @@
 .\out\pid.o: .\CSL\SWM181_StdPeriph_Driver\SWM181_cache.h
 .\out\pid.o: .\CSL\SWM181_StdPeriph_Driver\SWM181_sleep.h
 .\out\pid.o: APP\pid.h
+.\out\pid.o: APP\mylib.h
+.\out\pid.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\out\pid.o: APP\delay.h
+.\out\pid.o: APP\timer.h
+.\out\pid.o: APP\uart.h
+.\out\pid.o: APP\mylib.h
+.\out\pid.o: APP\send.h
+.\out\pid.o: APP\judge.h
+.\out\pid.o: APP\up.h
+.\out\pid.o: APP\IO.h
+.\out\pid.o: APP\adc.h
+.\out\pid.o: APP\driver.h

@@ -31,7 +31,7 @@ void uart2_init(void)
 	UART_initStruct.TimeoutIEn = 1;
 	UART_Init(UART2, &UART_initStruct);
 	
-	IRQ_Connect(IRQ0_15_UART2, IRQ0_IRQ, 1);
+	IRQ_Connect(IRQ0_15_UART2, IRQ10_IRQ, 0);
 	
 	UART_Open(UART2);
 }
@@ -60,7 +60,7 @@ u16 UART2_RX_STA=0;       //接收状态标记
 u8 flag2=0;
 //char buffer_2[UART_REC_LEN] = {0};   //UART_RX_LEN=128
 
-void IRQ0_Handler(void)   //空闲中断
+void IRQ10_Handler(void)   //空闲中断
 {
 uint32_t chr;
 	
@@ -97,6 +97,7 @@ uint32_t chr;
 			}
 		}
 		Rxd_End = 1;
+		Data_Deal();							//电容屏数据处理需要一直运行不要加中断
 		
 //		//如果是21个字节，那么是正常的接收
 //		if(UART_RXIndex == 21)
@@ -119,7 +120,7 @@ uint32_t chr;
 //			UART_RXIndex = 0;
 //		}
 	}
-	printf("%s",UART_RXBuffer);
+
 }
 
 void Data_Deal(void)
@@ -130,7 +131,7 @@ void Data_Deal(void)
 	if(Rxd_End == 1)
 	{
 		//如果是9个字节，正常数据
-		if((UART_RXIndex == 9)&&(UART_RXBuffer[0]==0x5A)&&(UART_RXBuffer[1]==0xA5))   //设置串口接受标志位防止在消融时改变参数
+		if(UART_RXIndex>=9&&UART_RXBuffer[2]==0x06)   //设置串口接受标志位防止在消融时改变参数
 		{
 			//放入你的处理代码
 			if(UART_RXBuffer[5]==0x00){		//功率接受需x10
@@ -138,6 +139,7 @@ void Data_Deal(void)
 			}
 			if (UART_RXBuffer[5]==0x01){  //时间接受需x10
 			CapacitiveScreen.time=UART_RXBuffer[8]*10;
+				SETTIME=CapacitiveScreen.time-120;
 			}
 			if (UART_RXBuffer[5]==0x03){		//温度=40+4x
 			CapacitiveScreen.temperature=UART_RXBuffer[8]*4+40;
@@ -154,16 +156,30 @@ void Data_Deal(void)
 			//Data_Send();
 		}
 		//如果是自己的数据粘包了
-		else if(UART_RXIndex == 26)
+		else if(UART_RXIndex == 15&&UART_RXBuffer[2]==0x03)
 		{
 			//把数据转移一下
-			for(i = 0; i < 21; i++)
+			for(i = 0; i < 9; i++)
 			{
-				UART_RXBuffer[i] = UART_RXBuffer[i + 5];
+				UART_RXBuffer[i] = UART_RXBuffer[i + 6];
 			}
-			
+	
 			//放入你的处理代码
-			
+			if(UART_RXIndex==9){		//功率接受需x10
+			CapacitiveScreen.power=UART_RXBuffer[8]*10;
+			}
+			if (UART_RXBuffer[5]==0x01){  //时间接受需x10
+			CapacitiveScreen.time=UART_RXBuffer[8]*10;
+			}
+			if (UART_RXBuffer[5]==0x03){		//温度=40+4x
+			CapacitiveScreen.temperature=UART_RXBuffer[8]*4+40;
+			}
+			if (UART_RXBuffer[5]==0x06){		//微波开关		UART_RXBuffer[8]==0x00关 UART_RXBuffer[8]==0x01开
+				CapacitiveScreen.MicrowaveSwitch=UART_RXBuffer[8];
+				}
+			if (UART_RXBuffer[5]==0x07){		//水泵开关		UART_RXBuffer[8]==0x00关 UART_RXBuffer【8]==0x01开
+			CapacitiveScreen.WaterPumpSwitch=UART_RXBuffer[8];
+			}
 			
 			//回发给设备
 			//Data_Send();

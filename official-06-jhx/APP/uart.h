@@ -27,7 +27,7 @@ typedef struct {
 
 	uint8_t  power;			//电容屏功率数据
 	
-	uint8_t  time;			//电容屏时间数据
+	uint16_t  time;			//电容屏时间数据
 	
 	uint8_t  temperature;			//电容屏温度数据
 	
